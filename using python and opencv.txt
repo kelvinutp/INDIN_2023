@@ -1,0 +1,30 @@
+using python and opencv
+
+gaussianblur also called smoothing filter
+needs teh same size mask?
+
+gaussian is good to remove noise
+
+sobel filter
+
+good for detecting edges on the image
+with opencv, has modified sobel function for detecting edges
+sobel x output: detect strong changes in X direction
+sobel y output: detect strong changes in Y direction
+
+canny edge
+opencv has its own function
+input image, min threshold, max (255)
+
+ROI (region of interes)
+
+image are 2D array, and do some slicing
+
+
+Para INDIN-
+aplicar gaussianblur (para quitar ruido)
+canny (para detectar borde)
+
+
+correo: yklee00815@gmail.com
+
