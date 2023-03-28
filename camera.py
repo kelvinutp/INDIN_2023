@@ -43,26 +43,25 @@ def camera(image=''):
     
     try:
         circles=np.uint16(np.around(circles))
-
-        for i in circles[0,:]:
-            cv2.circle(image,(i[0],i[1]),i[2],(0,255,0),2) #borde del tornillo
-            cv2.circle(image,(i[0],i[1]),2,(0,0,255),3) #centro del tornillo
-        
-        # print(circles[0,:,0:2])
-        # # print(np.subtract(circles[0,:,0:2],center))
-        # print(center)
         
         #encontrar ecuacion para distancia entre puntos
-        cls=0 #el punto mas cercano
-        for a in circles[0,:,0:2]:
-            dst=distance.euclidean(a,center)
+        cls=0
+        for i in circles[0,:]:
+            dst=distance.euclidean(i[:2],center)
             if cls==0 or dst<cls:
                 cls=dst
-                x=a
-        return x
+                x=i
+        cv2.circle(image,(x[0],x[1]),x[2],(0,255,0),2) #borde del tornillo
+        cv2.circle(image,(x[0],x[1]),2,(0,0,255),3) #centro del tornillo
+        z=(np.subtract(np.flip(center),x[0:2])) #diferencia entre el centro y el tornillo mas cercano
+        return z
+        # print(z)
+        # print(x)
+        # print(center)
         
     except IndexError:
         return 'no screw detected'
+        # print('no screw found')
 
     
     #display image
