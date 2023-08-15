@@ -1,0 +1,18 @@
+Caracteristicas
+
+Idealmente
+Utilizar un sensor de distancia, y cuando se este a una distancia <30cm entonces utilizar la camara para deteccion 
+***se considera que el tornillo esta listo para atornillar
+
+Destornillador
+1. va a tener 2 lineas semi-paralelas que corresponden al cuello del destornillador
+2. dada la disposicion del destornillador, el cuello del mismo se extiende desde el borde de la pantalla (x=0/y=0)
+
+CV2
+de la funcion cv2.findContours se obtiene los puntos de los contornos y el numero de contornos
+hace contornos extremandamente pequeños, y tienen poca cantidad de datos. 
+Por lo cual se puede despreciar aquellos vectores con pocos datos****
+    se debe considerar entonces el contorno de los tornillos
+
+Tornillos
+Son redondos o hexagonales
