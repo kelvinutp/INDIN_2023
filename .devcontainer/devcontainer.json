@@ -12,7 +12,16 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "bash postCreateCommand.sh",
+	"postCreateCommand": "bash .devcontainer/postCreateCommand.sh",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-toolsai.jupyter",
+				"ms-python.python"
+			]
+		}
+	},
+	// "postCreateCommand": "pip install -r requirements.txt",
 
 	// Configure tool-specific properties.
 	// "customizations": {},
