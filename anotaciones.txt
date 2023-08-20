@@ -16,3 +16,7 @@ Por lo cual se puede despreciar aquellos vectores con pocos datos****
 
 Tornillos
 Son redondos o hexagonales
+
+
+calcular distancia con camara
+hacer un cambio de distancia/grado y calcular la distancia con trigonometria
